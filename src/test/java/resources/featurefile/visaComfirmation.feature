@@ -1,6 +1,6 @@
 Feature: Visa confirmation test
 
-
+@smoke
   Scenario Outline: an Australian coming to uk for tourism
     Given I am on start page
     Then  I select my nationality "<nationality>"
@@ -14,7 +14,7 @@ Feature: Visa confirmation test
       | nationality | purpose |
       | Australia   | Tourism |
 
-
+ @smoke @sanity
   Scenario Outline: a Chilean to the uk for work and plan to stay longer than six months
     Given I am on start page
     Then I select my nationality "<nationality>"
@@ -31,7 +31,7 @@ Feature: Visa confirmation test
       | nationality | purpose                          | duration             | workType                     |
       | Chile       | Work, academic visit or business | longer than 6 months | Health and care professional |
 
-  @smoke
+  @sanity @regression
   Scenario Outline: a Colombian National coming to uk to join a partner for a long stay
     Given I am on start page
     Then I select my nationality "<nationality>"
@@ -41,8 +41,6 @@ Feature: Visa confirmation test
     And I select my partner UK immigration status "<status>"
     And I click on continue button in family immigration page
     And I see result page
-
-
 
 
     Examples:

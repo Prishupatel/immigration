@@ -14,10 +14,10 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",
                 "json:target/RunCuke/cucumber.json"},
-        tags = "@smoke"
+        tags = "@regression"
 
 )
-public class TestRunner {
+public class RegressionTestRunner {
 
     @AfterClass
     public static void setUp() {
